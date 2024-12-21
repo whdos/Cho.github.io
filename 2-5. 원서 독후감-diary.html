@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>책 다락방</title>
+    <style>
+        header{
+            text-align: center;
+            height: 150px;
+            background-color: antiquewhite;
+            padding-top: 5px;
+        }
+        h1 a{
+            text-decoration: none;
+            color: rgb(53, 46, 46);
+        }
+        nav{
+            height: 60px;
+            background-color: rgb(193, 155, 155);
+        }
+        section{
+            background-color: lightblue;
+            height: 510px;
+        }
+        aside{
+            background-color: lightcyan;
+            height: 100%; width: 15%;
+            text-align: center;
+            float: left;
+        }
+        ol li{
+            text-align: left;
+        }
+        ol li a{
+            text-decoration: none;
+            color: black;
+        }
+        ol li a:hover{
+            color: rgb(193, 155, 155);
+        }
+        ul{
+            margin: 0px;
+            padding: 0px;
+            width: 1500px;
+        }
+        ul li{
+            display: inline-block;
+            list-style-type: none;
+            padding-top: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        ul li a:hover{
+            color: lightcyan;
+        }
+        article{
+            height: 100%; 
+            width: 85%;
+            float: right;
+            background-color: lightsteelblue;
+            text-align: left;
+        }
+        #body{
+            height: 100%;
+            width: 935px;
+            float: right;
+            background-color: lightsteelblue;
+            text-align: left;
+        }
+        footer{
+            background-color: antiquewhite;
+            height: 300px;
+            text-align: center;
+        }
+        #form{
+            background-color: rgb(193, 155, 155);
+            float: left;
+            text-align: left;
+            height: 100%;
+            width: 40%;
+        }
+        #comments{
+            margin-top: 2%; margin-left: 2%;
+        }
+        input:hover, textarea:hover{
+            background-color: lightcyan;
+        }
+        input:focus, textarea:focus{
+            font-size: 105%;
+            background-color: lightcyan;
+        }
+        #commentsection{
+            height: 100%;
+            width: 60%;
+            background-color: antiquewhite;
+            float: right;
+            position: inherit;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function submit(){ 
+            const content= document.getElementById("comments").value;
+            if (content.trim() === "") {
+                alert("댓글을 입력해주세요.");
+            }
+            else {
+            const li = document.createElement("li");
+            li.textContent = content;
+            document.getElementById("result").appendChild(li);
+            document.getElementById("comments").value=""; }
+        } 
+        </script>
+</head>
+<body>
+    <header>
+        <h1><a href="1. 웹페이지 만들기-메인화면.html">책 다락방</a></h1><hr style="width: 1300px; color: rgb(193, 155, 155);">
+        <h3>☆ - 포근한 다락방에서 가지는 나만의 시간 - ☆</h3>
+    </header>
+    <nav>
+        <ul>
+            <b>
+            <li style="margin-left: 400px;"><a href="2-1. 원서 독후감-matilda.html">원서 독후감</a></li>
+            <li><a href="3-1. 영화 감상문-matilda.html">영화 감상문</a></li>
+            <li><a href="4. 위시리스트.html">위시 리스트</a></li>
+            <li><a href="5. 원서로 영어공부하는 방법.html">원서로 언어공부하기</a></li>
+            </b>
+        </ul>
+    </nav>
+    <section>
+        <aside><h3>{책장}</h3><hr style="width: 200px; color: lightsteelblue;">
+            <ol type="I">
+                <li><a href="2-1. 원서 독후감-matilda.html">Matilda</a></li><br>
+                <li><a href="2-2. 원서 독후감-harry potter.html">Harry Potter</a></li><br>
+                <li><a href="2-3. 원서 독후감-charli.html">Charli and the chocolate factory</a></li><br>
+                <li><a href="2-4. 원서 독후감-percy.html">Percy Jackon</a></li><br>
+                <li><a href="2-5. 원서 독후감-diary.html">Diary of a whimpy kid</a></li><br>
+                <li><a href="2-6. 원서 독후감-smile.html">Smile</a></li><br>
+                <li><a href="2-7. 원서 독후감-drama.html">Drama</a></li>
+            </ol>
+        </aside>
+        <article>
+            <img src="diary.jpg" style="height: 450px; width: 300px; margin-top: 30px; margin-left: 20px;">
+            <div id="body"><h2>책 제목: Diary of a wimpy kid</h2><hr style="width: 900px;">
+            저자: Jeff Kinny<br><br>
+            읽은 기간: 2023/12/20 - 2023/12/20<br><br>
+            후기: 이 책은 박진감이 넘치거나 흥미진진한 줄거리를 가지고 있지는 않지만, 주인공의 일상생활을 재미있고 익살스럽게 풀어놓았다. <br><br>
+            난이도: 책에서 사용되는 단어가 쉽고 그림이 많아 처음 원서를 읽는 사람도 어렵지 않게 이해할 수 있을 것이다. 책도 두껍지 않아 부담없이 읽을 수 있으며,
+            시리즈가 길어서 이 책이 마음에 든다면 오랫동안 읽을 수 있다는 장점이 있다. 하지만 이 책의 실사화 영화는 책에 비해 별로라고 느꼈다.<br>
+            ★★★★★<br><br>
+            관련 영화: Diary of a wimpy kid (2010)<br><br>
+            장르: 코미디, 소설<br><br>
+            책 가격: 13.95$<br><br>
+            별점: ★★★★☆
+            </div> 
+        </article>
+    </section>
+    <footer>
+        <div id="commentsection">
+            <ol id="result">
+            </ol>
+        </div>
+        <div id="form">
+            <br>
+            <b>댓글:</b><textarea cols="60" rows="15" id="comments" placeholder="책 또는 독후감에 대한 의견을 자유롭게 남겨주세요."></textarea>
+            <input type="submit" value="등록" onclick="submit()">
+        </div>
+    </footer>
+</body>
+</html>

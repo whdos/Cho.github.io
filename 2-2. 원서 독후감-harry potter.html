@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>책 다락방</title>
+    <style>
+        header{
+            text-align: center;
+            height: 150px;
+            background-color: antiquewhite;
+            padding-top: 5px;
+        }
+        h1 a{
+            text-decoration: none;
+            color: rgb(53, 46, 46);
+        }
+        nav{
+            height: 60px;
+            background-color: rgb(193, 155, 155);
+        }
+        section{
+            background-color: lightblue;
+            height: 510px;
+        }
+        aside{
+            background-color: lightcyan;
+            height: 100%; width: 15%;
+            text-align: center;
+            float: left;
+        }
+        ol li{
+            text-align: left;
+        }
+        ol li a{
+            text-decoration: none;
+            color: black;
+        }
+        ol li a:hover{
+            color: rgb(193, 155, 155);
+        }
+        ul{
+            margin: 0px;
+            padding: 0px;
+            width: 1500px;
+        }
+        ul li{
+            display: inline-block;
+            list-style-type: none;
+            padding-top: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        ul li a:hover{
+            color: lightcyan;
+        }
+        article{
+            height: 100%; 
+            width: 85%;
+            float: right;
+            background-color: lightsteelblue;
+            text-align: left;
+        }
+        #body{
+            height: 100%;
+            width: 935px;
+            float: right;
+            background-color: lightsteelblue;
+            text-align: left;
+        }
+        footer{
+            background-color: antiquewhite;
+            height: 300px;
+            text-align: center;
+        }
+        #form{
+            background-color: rgb(193, 155, 155);
+            float: left;
+            text-align: left;
+            height: 100%;
+            width: 40%;
+        }
+        #comments{
+            margin-top: 2%; margin-left: 2%;
+        }
+        input:hover, textarea:hover{
+            background-color: lightcyan;
+        }
+        input:focus, textarea:focus{
+            font-size: 105%;
+            background-color: lightcyan;
+        }
+        #commentsection{
+            height: 100%;
+            width: 60%;
+            background-color: antiquewhite;
+            float: right;
+            position: inherit;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function submit(){ 
+            const content= document.getElementById("comments").value;
+            if (content.trim() === "") {
+                alert("댓글을 입력해주세요.");
+            }
+            else {
+            const li = document.createElement("li");
+            li.textContent = content;
+            document.getElementById("result").appendChild(li);
+            document.getElementById("comments").value=""; }
+        } 
+        </script>
+</head>
+<body>
+    <header>
+        <h1><a href="1. 웹페이지 만들기-메인화면.html">책 다락방</a></h1><hr style="width: 1300px; color: rgb(193, 155, 155);">
+        <h3>☆ - 포근한 다락방에서 가지는 나만의 시간 - ☆</h3>
+    </header>
+    <nav>
+        <ul>
+            <b>
+            <li style="margin-left: 400px;"><a href="2-1. 원서 독후감-matilda.html">원서 독후감</a></li>
+            <li><a href="3-1. 영화 감상문-matilda.html">영화 감상문</a></li>
+            <li><a href="4. 위시리스트.html">위시 리스트</a></li>
+            <li><a href="5. 원서로 영어공부하는 방법.html">원서로 언어공부하기</a></li>
+            </b>
+        </ul>
+    </nav>
+    <section>
+        <aside><h3>{책장}</h3><hr style="width: 200px; color: lightsteelblue;">
+            <ol type="I">
+                <li><a href="2-1. 원서 독후감-matilda.html">Matilda</a></li><br>
+                <li><a href="2-2. 원서 독후감-harry potter.html">Harry Potter</a></li><br>
+                <li><a href="2-3. 원서 독후감-charli.html">Charli and the chocolate factory</a></li><br>
+                <li><a href="2-4. 원서 독후감-percy.html">Percy Jackon</a></li><br>
+                <li><a href="2-5. 원서 독후감-diary.html">Diary of a whimpy kid</a></li><br>
+                <li><a href="2-6. 원서 독후감-smile.html">Smile</a></li><br>
+                <li><a href="2-7. 원서 독후감-drama.html">Drama</a></li>
+            </ol>
+        </aside>
+        <article>
+            <img src="harry.jpg" style="height: 450px; width: 300px; margin-top: 30px; margin-left: 20px;">
+            <div id="body"><h2>책 제목: Harry Potter and the sorcerer's stone</h2><hr style="width: 900px;">
+            저자: J.L.Rowling<br><br>
+            읽은 기간: 2022/7/1 - 2022/7/1<br><br>
+            후기: 해리포터 시리즈는 내가 원서 읽기를 시작한 계기가 된 만큼 너무나도 흥미롭게 읽은 책이다.
+            처음에는 처음 보는 단어가 조금 있었는데 책에서 반복적으로 등장하다보니 자연스럽게 새로운 단어들을 익힐 수 있었다. 그리고 해리포터 세계관의
+            시리즈가 방대하기 때문에 오랫동안 읽을 수 있다는 점이 좋았다.<br><br>
+            난이도: 해리포터 1권은 시리즈 중 얇은 편에 속한다. 하지만 4편, 5편, 등 후반부로 갈 수록 책이 매우 두꺼워지기 때문에 원서를 처음 읽기 시작하는 사람에게는
+            조금 부담스러울 수 있을 것이다. 하지만 내가 해리포터를 좋아하고 어느정도의 원서를 읽을 수 있다면 재미있게 즐길 수 있을 것이다.<br>
+            ★★★☆☆<br><br>
+            관련 영화: Harry Potter and the sorcerer's stone (2001)<br><br>
+            장르: 소설, 판타지<br><br>
+            책 가격: 10.99$<br><br>
+            별점: ★★★★☆
+            </div> 
+        </article>
+    </section>
+    <footer>
+        <div id="commentsection">
+            <ol id="result">
+            </ol>
+        </div>
+        <div id="form">
+            <br>
+            <b>댓글:</b><textarea cols="60" rows="15" id="comments" placeholder="책 또는 독후감에 대한 의견을 자유롭게 남겨주세요."></textarea>
+            <input type="submit" value="등록" onclick="submit()">
+        </div>
+    </footer>
+</body>
+</html>

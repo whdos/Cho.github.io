@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>책 다락방</title>
+    <style>
+     header{
+            text-align: center;
+            height: 150px;
+            background-color: antiquewhite;
+            padding-top: 5px;
+        }
+        h1 a{
+            text-decoration: none;
+            color: rgb(53, 46, 46);
+        }
+        nav{
+            height: 60px;
+            background-color: rgb(193, 155, 155);
+        }
+        section{
+            background-color: lightblue;
+            height: 510px;
+        }
+        aside{
+            background-color: lightcyan;
+            height: 100%; width: 15%;
+            text-align: center;
+            float: left;
+        }
+        ol li{
+            text-align: left;
+        }
+        ol li a{
+            text-decoration: none;
+            color: black;
+        }
+        ol li a:hover{
+            color: rgb(193, 155, 155);
+        }
+        ul{
+            margin: 0px;
+            padding: 0px;
+            width: 1500px;
+        }
+        ul li{
+            display: inline-block;
+            list-style-type: none;
+            padding-top: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        ul li a:hover{
+            color: lightcyan;
+        }
+        article{
+            height: 100%; 
+            width: 85%;
+            float: right;
+            background-color: lightsteelblue;
+            text-align: left;
+        }
+        #body{
+            height: 100%;
+            width: 935px;
+            float: right;
+            background-color: lightsteelblue;
+            text-align: left;
+        }
+        footer{
+            background-color: antiquewhite;
+            height: 300px;
+            text-align: center;
+        }
+        #form{
+            background-color: rgb(193, 155, 155);
+            float: left;
+            text-align: left;
+            height: 100%;
+            width: 40%;
+        }
+        #comments{
+            margin-top: 2%; margin-left: 2%;
+        }
+        input:hover, textarea:hover{
+            background-color: lightcyan;
+        }
+        input:focus, textarea:focus{
+            font-size: 105%;
+            background-color: lightcyan;
+        }
+        #commentsection{
+            height: 100%;
+            width: 60%;
+            background-color: antiquewhite;
+            float: right;
+            position: inherit;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function submit(){ 
+            const content= document.getElementById("comments").value;
+            if (content.trim() === "") {
+                alert("댓글을 입력해주세요.");
+            }
+            else {
+            const li = document.createElement("li");
+            li.textContent = content;
+            document.getElementById("result").appendChild(li);
+            document.getElementById("comments").value=""; }
+        } 
+        </script>
+</head>
+<body>
+    <header>
+        <h1><a href="1. 웹페이지 만들기-메인화면.html">책 다락방</a></h1><hr style="width: 1300px; color: rgb(193, 155, 155);">
+        <h3>☆ - 포근한 다락방에서 가지는 나만의 시간 - ☆</h3>
+    </header>
+    <nav>
+        <ul>
+            <b>
+                <li style="margin-left: 400px;"><a href="2-1. 원서 독후감-matilda.html">원서 독후감</a></li>
+                <li><a href="3-1. 영화 감상문-matilda.html">영화 감상문</a></li>
+                <li><a href="4. 위시리스트.html">위시 리스트</a></li>
+                <li><a href="5. 원서로 영어공부하는 방법.html">원서로 언어공부하기</a></li>
+            </b>
+        </ul>
+    </nav>
+    <section>
+        <aside><h3>{DVD}</h3><hr style="width: 200px; color: lightsteelblue;">
+            <ol type="I">
+                <li><a href="3-1. 영화 감상문-matilda.html">Matilda</a></li><br>
+                <li><a href="3-2. 영화 감상문-harry.html">Harry Potter</a></li><br>
+                <li><a href="3-3. 영화 감상문-charli.html">Charli and the chocolate factory</a></li><br>
+                <li><a href="3-4. 영화 감상문-sherlock.html">Sherlock</a></li><br>
+                <li><a href="3-5. 영화 감상문-lord.html">Lord of the Rings</a></li>
+            </ol>
+        </aside>
+        <article>
+            <img src="sherlock.jpg" style="height: 450px; width: 300px; margin-top: 30px; margin-left: 20px;">
+            <div id="body"><h2>영화 제목: Sherlock (2010)</h2><hr style="width: 900px;">
+            감독: Mark Gatiss, Steven Moffat<br><br>
+            후기: 정말 너무너무 좋아하는 드라마 중 하나이다. 아서 코난 도일의 '셜록 홈즈'를 현대적으로 재해석 하여 만들어진 드라마로 연기자들의 연기력,
+            줄거리 등 어느하나 빠지는 곳이 없는 작품이라고 생각한다. 하지만 범죄와 추리와 관련된 드라마다 보니 처음보는 과학 용어기 자주 등장하고 셜록이 말을
+            하는 속도가 너무 빨라 자막없이 이해하기 힘들었다. 그럼에도 너무나도 재미있게 본 드라미이다.<br><br>
+            난이도: ★☆☆☆☆<br><br>
+            관련 책: Sherlock Holmes<br><br>
+            장르: 코미디, 드라마, 추리, 범죄<br><br>
+            별점: ★★★★★
+            </div> 
+        </article>
+    </section>
+    <footer>
+        <div id="commentsection">
+            <ol id="result">
+            </ol>
+        </div>
+        <div id="form">
+            <br>
+            <b>댓글:</b><textarea cols="60" rows="15" id="comments" placeholder="책 또는 독후감에 대한 의견을 자유롭게 남겨주세요."></textarea>
+            <input type="submit" value="등록" onclick="submit()">
+        </div>
+    </footer>
+</body>
+</html>
